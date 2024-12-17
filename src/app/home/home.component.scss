@@ -1,45 +1,40 @@
-@use "../../scss/mixins/window-classes";
-.search{
-  box-sizing: content-box;
+.results {
   display: grid;
-  grid-template-columns: 400px 300px;
-  grid-template-rows: 1fr;
-  gap: 10px;
-  padding: var(--content-padding);
-   @include window-classes.on-medium{
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include window-classes.on-compact{
-      grid-template-columns: 1fr;
-      place-items: center;
-
-      padding : 30px 0 0 0 ;
-  }
-  &__input{
-    border: solid 1px var(--primary-color);
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-    @include window-classes.on-compact{
-      width: 70%;
-    }
-  }
-  &__button {
-    padding: 10px;
-    border: solid 1px var(--primary-color);
-    background: var(--primary-color);
-    color: white;
-    border-radius: 8px;
-    width: 30%;
-    @include window-classes.on-medium{
-      width: 50%;
-    }
-    @include window-classes.on-compact{
-      width: 75%;
-    }
+  input[type="text"] {
+    width: 70%;
   }
 }
 
-
-
-
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}

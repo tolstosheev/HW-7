@@ -1,7 +1,10 @@
 <main>
-  <app-header></app-header>
-  <app-home></app-home>
-  <app-housing-location-container></app-housing-location-container>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <img class="brand-logo" src="/public/logo.svg" alt="logo" aria-hidden="true" />
+    </header>
+  </a>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 </main>
-<router-outlet />
-
