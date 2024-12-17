@@ -11,7 +11,8 @@
   margin-bottom: 15px;
 }
 .listing-location::before {
-  content: url('/public/location-pin.svg');
+  background-image: url("/assets/location-pin.svg");
+  content: "";
 }
 .listing-location {
   font-size: 24pt;
