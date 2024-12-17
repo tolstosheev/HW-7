@@ -1,4 +1,3 @@
-@for (houseItem of housesItems; track houseItem) {
-  <app-housing-location class="house" [data]="houseItem"></app-housing-location>
+@for (housingLocation of housingLocationList; track housingLocation) {
+  <app-housing-location class="house" [housingLocation]="housingLocation"></app-housing-location>
 }
-

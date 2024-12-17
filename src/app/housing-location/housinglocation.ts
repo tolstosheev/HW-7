@@ -1,4 +1,4 @@
-export interface IHouseItem {
+export interface HousingLocation {
   id: number;
   name: string;
   city: string;
@@ -8,4 +8,3 @@ export interface IHouseItem {
   wifi: boolean;
   laundry: boolean;
 }
-
